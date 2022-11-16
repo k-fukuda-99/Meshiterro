@@ -8,6 +8,11 @@ class PostCommentsController < ApplicationController
     redirect_to post_image_path(post_iamge)
   end
 
+  def destory
+    PostComment.find(params[:id]).destory
+    redirect_to post_image_path(params[:post_image_id])
+  end
+
 
   private
 
